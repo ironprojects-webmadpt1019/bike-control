@@ -6,7 +6,4 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-const passportRouter = require("./passportRouter");
-router.use("/auth", passportRouter);
-
 module.exports = router;

@@ -12,7 +12,8 @@ const flash = require("connect-flash");
 
 mongoose
   .connect(process.env.DBURL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
   .then(x => {
     console.log(
@@ -62,7 +63,6 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 app.use((req, res, next) => {
   res.locals.user = req.user;
@@ -72,7 +72,7 @@ app.use((req, res, next) => {
 });
 
 // default value for title local
-app.locals.title = "Passport authentication";
+app.locals.title = "Bike-Contol";
 
 // Routes middleware goes here
 const index = require("./routes/index");
