@@ -10,6 +10,8 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
 
+// Set the connection to the database
+
 mongoose
   .connect(process.env.DBURL, {
     useNewUrlParser: true,
@@ -32,7 +34,8 @@ const debug = require("debug")(
 const app = express();
 
 // Middleware Setup
-//app.use(logger("dev"));
+
+//app.use(logger("dev")); -> maybe later!
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -47,9 +50,11 @@ app.use(
 
 app.use(flash());
 
+// Require the passport index script
+
 require("./passport")(app);
 
-// Express View engine setup
+// Set the sass compiler
 
 app.use(
   require("node-sass-middleware")({
@@ -58,6 +63,8 @@ app.use(
     sourceMap: true
   })
 );
+
+// Express View engine setup
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -71,10 +78,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// default value for title local
+// Set the title globally
+
 app.locals.title = "Bike-Contol";
 
-// Routes middleware goes here
+// Require the index router, he will make charge of the other routers
+
 const index = require("./routes/index");
 app.use("/", index);
 
