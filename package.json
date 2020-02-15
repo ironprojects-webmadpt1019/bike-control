@@ -19,12 +19,15 @@
   "homepage": "https://github.com/ironprojects-webmadpt1019/bike-control#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "hbs": "^4.1.0",
     "mongoose": "^5.9.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
