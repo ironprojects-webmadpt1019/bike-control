@@ -1,0 +1,20 @@
+<form method="POST">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="email" class="form-control" id="username" name="username" placeholder="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" minlength="4">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="modelBike">model-bike</label>
+    <input type="text" class="form-control" id="modelBike" name="modelBike">
+  </div>
+  {{errors}}
+  <button type="submit" class="btn btn-primary">Sign up</button>
+</form>
