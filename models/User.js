@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 const schema = new mongoose.Schema(
   {
     username: { type: String, unique: true },
-    password: String
+    name: String,
+    password: String,
+    bike: [{ model: String, location: [Number] }],
+    reports: [String]
   },
   {
     timestamps: true
