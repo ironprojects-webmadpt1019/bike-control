@@ -22,5 +22,3 @@ passport.use(
     }
   })
 );
-
-console.log("Installed Passport Local Strategy");
