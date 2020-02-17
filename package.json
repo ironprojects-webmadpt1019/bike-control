@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ironprojects-webmadpt1019/bike-control#readme",
   "dependencies": {
+    "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
+    "connect-ensure-login": "^0.1.1",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
@@ -30,6 +32,7 @@
     "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "strength": "^0.1.4"
   }
 }
