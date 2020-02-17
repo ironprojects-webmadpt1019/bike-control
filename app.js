@@ -74,7 +74,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use((req, res, next) => {
   res.locals.user = req.user;
   res.locals.errors = req.flash("error");
-  console.log(res.locals.errors);
+  //console.log(res.locals.errors);
   next();
 });
 
