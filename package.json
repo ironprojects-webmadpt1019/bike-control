@@ -1,0 +1,35 @@
+{
+  "name": "bike-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=starter-code:* nodemon -e js,hbs ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironprojects-webmadpt1019/bike-control.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ironprojects-webmadpt1019/bike-control/issues"
+  },
+  "homepage": "https://github.com/ironprojects-webmadpt1019/bike-control#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.1.0",
+    "mongoose": "^5.9.1",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
