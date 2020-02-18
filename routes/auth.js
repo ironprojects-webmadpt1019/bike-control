@@ -9,7 +9,6 @@ const passport = require("passport");
 const ensureLogin = require("connect-ensure-login");
 const strength = require("strength");
 
-
 router.get("/register", ensureLogin.ensureLoggedOut(), (req, res, next) => {
   res.render("auth/register");
 });
@@ -18,14 +17,13 @@ router.get("/login", ensureLogin.ensureLoggedOut(), (req, res, next) => {
   res.render("auth/login");
 });
 
-
 router.post(
   "/register",
   ensureLogin.ensureLoggedOut(),
   async (req, res, next) => {
     const { username, password, name, modelBike } = req.body;
-    console.log(req.body)
-    if (username === "" || password === "" || name === "" || modelBike === "" ) {
+    console.log(req.body);
+    if (username === "" || password === "" || name === "") {
       req.flash("error", "Indicate an username and password to signup");
       return res.redirect("/auth/register");
     } else {
@@ -36,7 +34,7 @@ router.post(
             username,
             password: hashPassword(password),
             name,
-            bike:{model:modelBike}
+            bike: { model: modelBike }
           });
           console.log(strength(password));
           return res.redirect("/");

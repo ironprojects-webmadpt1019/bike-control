@@ -1,20 +1,23 @@
 <form method="POST">
   <div class="form-group">
-    <label for="username">Username</label>
-    <input type="email" class="form-control" id="username" name="username" placeholder="email" required>
+    <label for="username">Email</label>
+    <input type="email" class="form-control" id="username" name="username" placeholder="Email" required>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" minlength="4">
+    <input type="password" class="form-control" id="password" name="password" placeholder="password" minlength="4"
+      required>
   </div>
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
   </div>
   <div class="form-group">
-    <label for="modelBike">model-bike</label>
-    <input type="text" class="form-control" id="modelBike" name="modelBike">
+    <label for="modelBike">Add a bike</label>
+    <input type="text" class="form-control" id="modelBike" name="modelBike" placeholder="Bike model">
   </div>
-  {{errors}}
+  {{#if errors}}
+  {{> errors}}
+  {{/if}}
   <button type="submit" class="btn btn-primary">Sign up</button>
 </form>
