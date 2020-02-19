@@ -5,8 +5,12 @@ const Bike = require("../models/Bike");
 
 router.get("/", async (req, res, next) => {
   const loggedUser = req.user;
-  const bikes = await Bike.find({ owner: loggedUser.username });
-  res.render("user/bike/bikes", { bikes });
+  try {
+    const bikes = await Bike.find({ owner: loggedUser.username });
+    return res.render("user/bike/bikes", { bikes });
+  } catch (e) {
+    next();
+  }
 });
 
 // Create -> Add a new bike
@@ -17,13 +21,15 @@ router.get("/add", (req, res, next) => {
 router.post("/add", async (req, res, next) => {
   const { modelBike } = req.body;
   const loggedUser = req.user;
-
-  const newBike = await Bike.create({
-    model: modelBike,
-    owner: loggedUser.username
-  });
-
-  res.redirect("/user/bikes");
+  try {
+    const newBike = await Bike.create({
+      model: modelBike,
+      owner: loggedUser.username
+    });
+    return res.redirect("/user/bikes");
+  } catch (e) {
+    next();
+  }
 });
 
 // Update -> edit a bike
