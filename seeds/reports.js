@@ -11,7 +11,7 @@ const getRandomInRange = function(fromLon, toLon, fromLat, toLat, fixed) {
 
 withDbConnection(async () => {
   await dropIfExists(Reports);
-  const reports = new Array(50).fill(0).map(e => {
+  const reports = new Array(200).fill(0).map(e => {
     return {
       location: {
         type: "Point",

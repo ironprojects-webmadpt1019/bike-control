@@ -4,9 +4,15 @@ const User = require("../models/User");
 const Bike = require("../models/Bike");
 const Report = require("../models/Reports");
 
-router.get("/", async (req, res, next) => {
-  res.render("map/map");
-});
+const ensureLogin = require("connect-ensure-login");
+
+router.get(
+  "/",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  async (req, res, next) => {
+    res.render("map/map");
+  }
+);
 
 router.get("/reports", async (req, res, next) => {
   const reports = await Report.find();
