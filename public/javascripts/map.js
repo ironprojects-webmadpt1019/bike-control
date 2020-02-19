@@ -1,6 +1,11 @@
 mapboxgl.accessToken =
   "pk.eyJ1IjoibHVpc21pZmVpam9vIiwiYSI6ImNrNm5mZzI0aDBycHQzbnFzd2Z1MXZmbm8ifQ.ayNgeiCCTcCoVcZ-0aagPQ";
 
+window.reportsApi = axios.create({
+  baseURL: "http://localhost:3000/map/reports",
+  timeout: 5000
+});
+
 // Set the map on the page
 window.setMap = (center, zoom = 10) => {
   const map = new mapboxgl.Map({
