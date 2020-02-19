@@ -25,11 +25,12 @@ router.post("/settings", async (req, res, next) => {
 });
 
 router.get("/bikes", (req, res, next) => {
-  res.render("user/bikes");
+  res.render("user/bike/bikes");
 });
 
+// Create -> Add a new bike
 router.get("/bikes/add", (req, res, next) => {
-  res.render("user/addBike");
+  res.render("user/bike/add");
 });
 
 router.post("/bikes/add", async (req, res, next) => {
@@ -41,4 +42,26 @@ router.post("/bikes/add", async (req, res, next) => {
   await loggedUser.save();
   res.redirect("/user/bikes");
 });
+
+// Update -> edit a bike
+router.get("/bikes/edit/:id", async (req, res, next) => {
+  const { id } = req.params;
+  const loggedUser = req.user;
+  console.log(id);
+  try {
+    const bike = await loggedUser.bike.findById(id);
+    console.log(bike);
+    res.render("user/bike/edit", { bike });
+  } catch (e) {
+    next();
+  }
+});
+
+// Delete -> Remove a bike
+router.get("/bike/delete/:id", async (req, res, next) => {
+  const { id } = req.params;
+  const obj = await User.bike.findByIdAndRemove(id);
+  res.redirect("/user/bikes");
+});
+
 module.exports = router;
