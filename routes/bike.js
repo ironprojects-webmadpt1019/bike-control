@@ -6,7 +6,7 @@ const Bike = require("../models/Bike");
 router.get("/", async (req, res, next) => {
   const loggedUser = req.user;
   try {
-    const bikes = await Bike.find({ owner: loggedUser.username });
+    const bikes = await Bike.find({ owner: loggedUser._id });
     return res.render("user/bike/bikes", { bikes });
   } catch (e) {
     next();
@@ -24,7 +24,7 @@ router.post("/add", async (req, res, next) => {
   try {
     const newBike = await Bike.create({
       model: modelBike,
-      owner: loggedUser.username
+      owner: loggedUser._id
     });
     return res.redirect("/user/bikes");
   } catch (e) {
