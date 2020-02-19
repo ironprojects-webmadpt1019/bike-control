@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
+const Bike = require("../models/Bike");
+
 // Add bcrypt to encrypt passwords
 const { hashPassword, checkHashed } = require("../lib/hashing");
 // Add passport
@@ -21,10 +23,18 @@ router.post(
   "/register",
   ensureLogin.ensureLoggedOut(),
   async (req, res, next) => {
-    const { username, password, name, modelBike } = req.body;
-    console.log(req.body);
-    if (username === "" || password === "" || name === "") {
-      req.flash("error", "Indicate an username and password to signup");
+    const { username, password, firstName, lastName, modelBike } = req.body;
+    //console.log(req.body);
+    if (
+      username === "" ||
+      password === "" ||
+      firstName === "" ||
+      lastName === ""
+    ) {
+      req.flash(
+        "error",
+        "You have to fill the required fields (username, name and password"
+      );
       return res.redirect("/auth/register");
     } else {
       try {
@@ -33,9 +43,14 @@ router.post(
           const newUser = await User.create({
             username,
             password: hashPassword(password),
-            name,
-            bike: { model: modelBike }
+            name: { first: firstName, last: lastName }
           });
+          if (modelBike != "") {
+            const newBike = await Bike.create({
+              model: modelBike,
+              owner: username
+            });
+          }
           console.log(strength(password));
           return res.redirect("/");
         } else if (strength(password) < 3) {
