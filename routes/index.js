@@ -13,4 +13,7 @@ router.use("/auth", auth);
 const user = require("./user");
 router.use("/user", ensureLogin.ensureLoggedIn("/auth/login"), user);
 
+const map = require("./map");
+router.use("/map", map);
+
 module.exports = router;
