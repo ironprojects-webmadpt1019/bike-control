@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
+const Bike = require("../models/Bike");
+
 // Add bcrypt to encrypt passwords
 const { hashPassword, checkHashed } = require("../lib/hashing");
 // Add passport
@@ -22,7 +24,7 @@ router.post(
   ensureLogin.ensureLoggedOut(),
   async (req, res, next) => {
     const { username, password, firstName, lastName, modelBike } = req.body;
-    console.log(req.body);
+    //console.log(req.body);
     if (
       username === "" ||
       password === "" ||
@@ -44,8 +46,10 @@ router.post(
             name: { first: firstName, last: lastName }
           });
           if (modelBike != "") {
-            newUser.bike.push({ model: modelBike });
-            await newUser.save();
+            const newBike = await Bike.create({
+              model: modelBike,
+              owner: username
+            });
           }
           console.log(strength(password));
           return res.redirect("/");
