@@ -24,4 +24,21 @@ router.post("/settings", async (req, res, next) => {
   res.redirect("/user/settings");
 });
 
+router.get("/bikes", (req, res, next) => {
+  res.render("user/bikes");
+});
+
+router.get("/bikes/add", (req, res, next) => {
+  res.render("user/addBike");
+});
+
+router.post("/bikes/add", async (req, res, next) => {
+  const { modelBike } = req.body;
+  const loggedUser = req.user;
+
+  loggedUser.bike.push({ model: modelBike });
+
+  await loggedUser.save();
+  res.redirect("/user/bikes");
+});
 module.exports = router;

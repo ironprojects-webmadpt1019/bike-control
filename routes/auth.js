@@ -41,9 +41,12 @@ router.post(
           const newUser = await User.create({
             username,
             password: hashPassword(password),
-            name: { first: firstName, last: lastName },
-            bike: { model: modelBike }
+            name: { first: firstName, last: lastName }
           });
+          if (modelBike != "") {
+            newUser.bike.push({ model: modelBike });
+            await newUser.save();
+          }
           console.log(strength(password));
           return res.redirect("/");
         } else if (strength(password) < 3) {
