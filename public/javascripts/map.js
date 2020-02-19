@@ -14,7 +14,7 @@ window.setMap = (center, zoom = 10) => {
     center,
     zoom
   });
-  map.addControl(new mapboxgl.NavigationControl());
+  //map.addControl(new mapboxgl.NavigationControl());
 
   return map;
 };
