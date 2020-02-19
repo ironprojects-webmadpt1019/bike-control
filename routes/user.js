@@ -44,12 +44,12 @@ router.post("/bikes/add", async (req, res, next) => {
 });
 
 // Update -> edit a bike
-router.get("/bikes/edit/:id", async (req, res, next) => {
-  const { id } = req.params;
+router.get("/bikes/edit/:index", async (req, res, next) => {
+  const { index } = req.params;
   const loggedUser = req.user;
-  console.log(id);
+  console.log(index);
   try {
-    const bike = await loggedUser.bike.findById(id);
+    const bike = loggedUser.bike[index];
     console.log(bike);
     res.render("user/bike/edit", { bike });
   } catch (e) {
@@ -57,10 +57,25 @@ router.get("/bikes/edit/:id", async (req, res, next) => {
   }
 });
 
+router.post("/bikes/edit/:index", async (req, res, next) => {
+  const { modelBike } = req.body;
+  const { index } = req.params;
+  const loggedUser = req.user;
+
+  loggedUser.bike[index].model = modelBike;
+
+  await loggedUser.save();
+  res.redirect("/user/bikes");
+});
+
 // Delete -> Remove a bike
-router.get("/bike/delete/:id", async (req, res, next) => {
-  const { id } = req.params;
-  const obj = await User.bike.findByIdAndRemove(id);
+router.get("/bikes/delete/:index", async (req, res, next) => {
+  const { index } = req.params;
+  const loggedUser = req.user;
+
+  const obj = loggedUser.bike.splice([index], 1);
+  await loggedUser.save();
+
   res.redirect("/user/bikes");
 });
 
