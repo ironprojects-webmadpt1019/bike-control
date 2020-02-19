@@ -21,10 +21,18 @@ router.post(
   "/register",
   ensureLogin.ensureLoggedOut(),
   async (req, res, next) => {
-    const { username, password, name, modelBike } = req.body;
+    const { username, password, firstName, lastName, modelBike } = req.body;
     console.log(req.body);
-    if (username === "" || password === "" || name === "") {
-      req.flash("error", "Indicate an username and password to signup");
+    if (
+      username === "" ||
+      password === "" ||
+      firstName === "" ||
+      lastName === ""
+    ) {
+      req.flash(
+        "error",
+        "You have to fill the required fields (username, name and password"
+      );
       return res.redirect("/auth/register");
     } else {
       try {
@@ -33,7 +41,7 @@ router.post(
           const newUser = await User.create({
             username,
             password: hashPassword(password),
-            name,
+            name: { first: firstName, last: lastName },
             bike: { model: modelBike }
           });
           console.log(strength(password));
