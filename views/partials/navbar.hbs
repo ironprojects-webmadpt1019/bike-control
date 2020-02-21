@@ -1,10 +1,25 @@
-<div id="navbar">
-  <div id="sub-nav">
-    <h2>Bike-Control</h2>
-    <div class="container" onclick="hamburger(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-  </div>
+<a href="#" class="hamburger-button">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+</a>
+
+<div class="overlay">
+  <nav class="menu">
+    <ul>
+      {{#if user}}
+      <li><a href="/map">Map</a></li>
+      <li><a href="/user/settings">Profile</a></li>
+      <li><a href="/user/bikes">Bikes</a></li>
+      <li><a href="/auth/logout">Logout</a></li>
+      {{/if}}
+      {{#unless user}}
+      <li><a href="/">Home</a></li>
+      <li><a href="/auth/login">Sign in</a></li>
+      <li><a href="/auth/register">Register</a></li>
+      {{/unless}}
+    </ul>
+  </nav>
 </div>

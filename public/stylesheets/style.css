@@ -13,47 +13,119 @@ body {
   bottom: 0;
   width: 100%; }
 
-#navbar {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0; }
-
-#sub-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom: thin white; }
-  #sub-nav h2 {
-    padding: 0;
-    margin: 0; }
-
-.container {
+/* Hamburger button styles. */
+.hamburger-button {
+  position: absolute;
+  transition: 0.3s ease-in-out;
   width: 35px;
-  cursor: pointer; }
+  height: 30px;
+  display: block;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100; }
 
-.bar1,
-.bar2,
-.bar3 {
+.hamburger-button span {
+  position: absolute;
+  height: 2px;
   width: 100%;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s; }
+  background-color: #fff;
+  top: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; }
 
-/* Rotate first bar */
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px); }
+.hamburger-button span:nth-child(1) {
+  top: 0px; }
 
-/* Fade out the second bar */
-.change .bar2 {
+.hamburger-button span:nth-child(2),
+.hamburger-button span:nth-child(3) {
+  top: 10px; }
+
+.hamburger-button span:nth-child(4) {
+  top: 20px; }
+
+.hamburger-button.active span {
+  background-color: #fff; }
+
+.hamburger-button.active span:nth-child(1),
+.hamburger-button.active span:nth-child(4) {
   opacity: 0; }
 
-/* Rotate last bar */
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px); }
+.hamburger-button.active span:nth-child(2) {
+  transform: rotate(45deg); }
+
+.hamburger-button.active span:nth-child(3) {
+  transform: rotate(-45deg); }
+
+/* 1. Style the overlay & navigation. */
+.overlay {
+  position: fixed;
+  background: #7ba9c3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, height 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+nav {
+  font-size: 2rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+nav ul li {
+  opacity: 0;
+  margin: 1rem 0; }
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  opacity: 0.75; }
+
+nav ul li a:hover {
+  opacity: 1; }
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-25%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+/* 3. Style the visible overlay. */
+.overlay.visible {
+  background-color: #000;
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
+  z-index: 1; }
+
+.overlay.visible li {
+  animation: fadeInLeft 0.3s ease forwards; }
+
+.overlay.visible li:nth-of-type(1) {
+  animation-delay: 0.23s; }
+
+.overlay.visible li:nth-of-type(2) {
+  animation-delay: 0.26s; }
+
+.overlay.visible li:nth-of-type(3) {
+  animation-delay: 0.29s; }
+
+.overlay.visible li:nth-of-type(4) {
+  animation-delay: 0.32s; }
+
+.overlay.visible li:nth-of-type(5) {
+  animation-delay: 0.35s; }
 
 /*# sourceMappingURL=style.css.map */
