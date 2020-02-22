@@ -1,18 +1,27 @@
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <a href="/">Home</a>
-      <a href="/auth/register">Sign in</a>
-      <a href="/auth/login">Login</a>
-      <a href="/auth/logout">Logout</a>
+<div class="nav">
+  <a href="#" class="hamburger-button">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
-    </div>
+  </a>
+
+  <div class="overlay">
+    <nav class="menu">
+      <ul>
+        {{#if user}}
+        <li><a href="/map">Map</a></li>
+        <li><a href="/user/settings">Profile</a></li>
+        <li><a href="/user/bikes">Bikes</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {{/if}}
+        {{#unless user}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/auth/login">Sign in</a></li>
+        <li><a href="/auth/register">Register</a></li>
+        {{/unless}}
+      </ul>
+    </nav>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
 </div>
