@@ -20,4 +20,10 @@ router.get("/reports", async (req, res, next) => {
   res.json(reports);
 });
 
+router.get("/bikes", async (req, res, next) => {
+  const loggedUser = req.user;
+  const bikes = await Bike.find({ owner: loggedUser._id });
+  res.json(bikes);
+});
+
 module.exports = router;

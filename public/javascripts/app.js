@@ -7,8 +7,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     const center = [longitude, latitude];
     map.setCenter(center);
   });
+  //add user location point(bottom)
+  map.addControl(
+    new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    }),
+    "bottom-left"
+  );
 
   map.on("load", function() {
+    //paint UserReports
     reportsApi.get().then(res => {
       const reports = res.data;
 
@@ -37,7 +48,39 @@ document.addEventListener("DOMContentLoaded", async () => {
               [22, 180]
             ]
           },
-          "circle-color": "#ffffff"
+          "circle-color": "#cf000f"
+        }
+      });
+    });
+
+    //paint UserBikess
+    bikesApi.get().then(res => {
+      const bikes = res.data;
+      const data = bikes.map(e => ({
+        type: "Feature",
+        geometry: e.location
+      }));
+      map.addSource("bikes", {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          features: data
+        }
+      });
+      map.addLayer({
+        id: "bikes",
+        type: "circle",
+        source: "bikes",
+        paint: {
+          // make circles larger as the user zooms from z12 to z22
+          "circle-radius": {
+            base: 1.5,
+            stops: [
+              [12, 2],
+              [22, 180]
+            ]
+          },
+          "circle-color": "#00e640"
         }
       });
     });

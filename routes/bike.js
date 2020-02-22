@@ -68,4 +68,13 @@ router.get("/delete/:id", async (req, res, next) => {
   }
 });
 
+//lcoation Bikes
+router.post("/location", async (req, res, next) => {
+  const { id, longitude, latitude } = req.body;
+  const bike = await Bike.findById(id);
+  bike.location.coordinates = [longitude, latitude];
+  await bike.save();
+  res.json({});
+});
+
 module.exports = router;
