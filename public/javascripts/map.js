@@ -10,6 +10,11 @@ window.bikesApi = axios.create({
   timeout: 5000
 });
 
+window.locationApi = axios.create({
+  baseURL: "http://localhost:3000/user/bikes/location",
+  timeout: 5000
+});
+
 // Set the map on the page
 window.setMap = (center, zoom = 15) => {
   const map = new mapboxgl.Map({
@@ -22,5 +27,3 @@ window.setMap = (center, zoom = 15) => {
 
   return map;
 };
-
-
