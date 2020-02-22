@@ -1,25 +1,27 @@
-<a href="#" class="hamburger-button">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+<div class="nav">
+  <a href="#" class="hamburger-button">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
-</a>
+  </a>
 
-<div class="overlay">
-  <nav class="menu">
-    <ul>
-      {{#if user}}
-      <li><a href="/map">Map</a></li>
-      <li><a href="/user/settings">Profile</a></li>
-      <li><a href="/user/bikes">Bikes</a></li>
-      <li><a href="/auth/logout">Logout</a></li>
-      {{/if}}
-      {{#unless user}}
-      <li><a href="/">Home</a></li>
-      <li><a href="/auth/login">Sign in</a></li>
-      <li><a href="/auth/register">Register</a></li>
-      {{/unless}}
-    </ul>
-  </nav>
+  <div class="overlay">
+    <nav class="menu">
+      <ul>
+        {{#if user}}
+        <li><a href="/map">Map</a></li>
+        <li><a href="/user/settings">Profile</a></li>
+        <li><a href="/user/bikes">Bikes</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {{/if}}
+        {{#unless user}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/auth/login">Sign in</a></li>
+        <li><a href="/auth/register">Register</a></li>
+        {{/unless}}
+      </ul>
+    </nav>
+  </div>
 </div>

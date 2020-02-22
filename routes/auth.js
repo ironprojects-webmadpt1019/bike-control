@@ -78,7 +78,7 @@ router.post(
     failureFlash: "Incorret username or password"
   }),
   function(req, res) {
-    res.redirect("/");
+    res.redirect("/map");
   }
 );
 

@@ -1,11 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-}
-#navbarToggleExternalContent {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  font-family: "Raleway";
 }
 
 #map {
@@ -83,7 +81,7 @@ body {
 
 nav {
   font-size: 2rem;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
