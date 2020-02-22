@@ -70,10 +70,11 @@ router.get("/delete/:id", async (req, res, next) => {
 
 //lcoation Bikes
 router.post("/location", async (req, res, next) => {
-  const { id, lon, lat } = req.body;
+  const { id, longitude, latitude } = req.body;
   const bike = await Bike.findById(id);
-  bike.location.coordinates = [lon, lat];
-  await Bike.save();
+  bike.location.coordinates = [longitude, latitude];
+  await bike.save();
+  res.json({});
 });
 
 module.exports = router;

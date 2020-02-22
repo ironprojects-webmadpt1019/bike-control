@@ -22,8 +22,8 @@ router.get("/reports", async (req, res, next) => {
 
 router.get("/bikes", async (req, res, next) => {
   const loggedUser = req.user;
-const bikes = await Bike.find({owner: loggedUser._id})
-res.json(bikes);
-})
+  const bikes = await Bike.find({ owner: loggedUser._id });
+  res.json(bikes);
+});
 
 module.exports = router;
