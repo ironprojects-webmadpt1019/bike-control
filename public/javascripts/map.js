@@ -5,6 +5,10 @@ window.reportsApi = axios.create({
   baseURL: "http://localhost:3000/map/reports",
   timeout: 5000
 });
+window.bikesApi = axios.create({
+  baseURL: "http://localhost:3000/map/bikes",
+  timeout: 5000
+});
 
 // Set the map on the page
 window.setMap = (center, zoom = 15) => {
@@ -18,3 +22,5 @@ window.setMap = (center, zoom = 15) => {
 
   return map;
 };
+
+

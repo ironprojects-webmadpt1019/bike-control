@@ -13,7 +13,15 @@ const schema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    toJSON: {
+      transform(doc, ret) {
+        delete ret.__v;
+        delete ret.updatedAt;
+        delete ret.createdAt;
+        return ret;
+      }
+    }
   }
 );
 
