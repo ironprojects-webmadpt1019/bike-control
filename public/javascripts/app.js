@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     const center = [longitude, latitude];
     map.setCenter(center);
   });
+  //add user location point(bottom)
+  map.addControl(
+    new mapboxgl.GeolocateControl({
+    positionOptions: {
+    enableHighAccuracy: true
+    },
+    trackUserLocation: true
+    }),
+    "bottom-left"
+    );
 
   map.on("load", function() {
     reportsApi.get().then(res => {

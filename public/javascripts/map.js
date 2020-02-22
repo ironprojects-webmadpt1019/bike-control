@@ -7,7 +7,7 @@ window.reportsApi = axios.create({
 });
 
 // Set the map on the page
-window.setMap = (center, zoom = 10) => {
+window.setMap = (center, zoom = 15) => {
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/luismifeijoo/ck6o0g2ir12l31iqo03sgbcv2",
