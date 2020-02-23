@@ -4,6 +4,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/bikeControl.jpeg);
+  min-height: 100%;
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: cover; /*estandar css3*/
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #map {
@@ -19,7 +29,9 @@ body {
   width: 35px;
   height: 30px;
   display: block;
-  top: 2rem;
+  top: 37px;
+  margin-right: 10px;
+  // top: 2rem;
   right: 2rem;
   z-index: 100;
 }
@@ -77,6 +89,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  border-bottom-style: inset;
+}
+.nav-margin {
+  width: 90%;
+  padding-left: 19px;
+  padding-top: 12px;
+}
+
+.nav h2 {
+  padding-left: 24px;
 }
 
 nav {
