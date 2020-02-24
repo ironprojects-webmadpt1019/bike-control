@@ -90,9 +90,7 @@ body {
   border-bottom-style: inset; }
 
 .nav-margin {
-  width: 90%;
-  padding-left: 19px;
-  padding-top: 12px; }
+  padding: 15px; }
 
 .nav h2 {
   padding-left: 24px; }
@@ -260,116 +258,43 @@ nav ul li a:hover {
 
 /*INDEX*/
 .index-colocacion {
-  position: absolute;
+  position: relative;
   width: 315px;
-  height: 216px;
-  left: 22px;
-  top: 239px;
+  margin: 50% auto;
   background: rgba(0, 0, 0, 0.75); }
 
 .letras {
-  position: sticky;
-  height: 23px;
-  left: 43px;
-  top: 212px;
-  padding-top: 10px;
-  padding-left: 10px;
   font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 1.5rem;
   color: #ffffff; }
 
-.letras-2 {
-  position: sticky;
-  width: 146px;
-  height: 23px;
-  left: 217px;
-  top: 249px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff; }
+.line {
+  display: flex;
+  padding: 5px 0;
+  align-items: center; }
 
-.letras-3 {
-  position: sticky;
-  width: 146px;
-  height: 23px;
-  left: 182px;
-  top: 288px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff; }
+.white-box {
+  background-color: #fff;
+  height: 1.5rem; }
 
-.letras-4 {
-  position: sticky;
-  height: 23px;
-  left: 43px;
-  top: 326px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff;
-  left: 31px;
-  margin-top: 21px;
-  margin-left: 10px; }
+#box-1 {
+  margin: 0 10px;
+  width: 53%; }
 
-.letras-5 {
-  position: sticky;
-  width: 146px;
-  height: 23px;
-  left: 299px;
-  top: 326px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff; }
+#box-2 {
+  margin: 0 10px;
+  width: 47%; }
 
-.input-index-1 {
-  position: sticky;
-  width: 171px;
-  height: 30px;
-  left: 146px;
-  top: 205px; }
+#box-3 {
+  margin: 0 10px;
+  width: 40%; }
 
-.input-index-2 {
-  position: sticky;
-  width: 165px;
-  height: 28px;
-  left: 31px;
-  margin-top: 21px;
-  top: 246px; }
+#box-4 {
+  margin: 0 10px;
+  width: 40%; }
 
-.input-index-3 {
-  position: sticky;
-  width: 137px;
-  height: 28px;
-  left: 31px;
-  margin-top: 21px;
-  top: 285px; }
-
-.input-index-4 {
-  position: sticky;
-  width: 55px;
-  height: 28px;
-  left: 260px;
-  top: 285px; }
-
-.input-index-5 {
-  position: sticky;
-  width: 142px;
-  height: 28px;
-  left: 140px;
-  top: 323px; }
+#box-5 {
+  margin: 0 10px;
+  width: 45%; }
 
 /*# sourceMappingURL=style.css.map */
