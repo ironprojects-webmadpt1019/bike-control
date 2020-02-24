@@ -1,0 +1,23 @@
+<form method="POST">
+  {{#if errors}}
+  {{>errors}}
+  {{/if}}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username"
+      value="{{user.username}}">
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First name</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" value="{{user.name.first}}">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">First name</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" value="{{user.name.last}}">
+  </div>
+
+  <a href="/user/bikes"><button type="button" class="btn btn-success">Add a bike</button></a>
+  <button type="submit" class="btn btn-primary">Update {{user.name.first}} settings</button>
+</form>

@@ -1,0 +1,8 @@
+# Environment Variables should NEVER be published
+.env
+# Dependency directory
+node_modules
+# Editor configuration
+.vscode
+# package-lock.json
+package-lock.json

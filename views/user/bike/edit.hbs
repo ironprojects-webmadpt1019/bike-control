@@ -1,0 +1,15 @@
+<form method="POST">
+  {{#if errors}}
+  {{>errors}}
+  {{/if}}
+  {{#with bike}}
+  <div class="form-group">
+    <label for="model">{{model}}</label>
+    <input type="text" class="form-control" id="model" name="modelBike" value="{{model}}">
+  </div>
+
+  <a href="#"><button type="button" class="btn btn-success">Add Location</button></a>
+
+  <button type="submit" class="btn btn-primary">Update</button>
+  {{/with}}
+</form>
