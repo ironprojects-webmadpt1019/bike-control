@@ -2,7 +2,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway"; }
+  font-family: "Raleway";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/bikeControl.jpeg);
+  min-height: 100%;
+  -moz-background-size: 100% 100%;
+  /*Firefox 3.6*/
+  -o-background-size: 100% 100%;
+  /*opera*/
+  -webkit-background-size: 100% 100%;
+  /*Safari*/
+  background-size: cover;
+  /*estandar css3*/
+  background-attachment: fixed;
+  background-position: center; }
 
 #map {
   position: absolute;
@@ -17,7 +31,8 @@ body {
   width: 35px;
   height: 30px;
   display: block;
-  top: 2rem;
+  top: 37px;
+  margin-right: 10px;
   right: 2rem;
   z-index: 100; }
 
@@ -66,6 +81,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  border-bottom-style: inset; }
+
+.nav-margin {
+  padding: 15px; }
+
+.nav h2 {
+  padding-left: 24px; }
 
 nav {
   font-size: 2rem;
@@ -227,5 +255,47 @@ nav ul li a:hover {
 
 .hide {
   visibility: hidden; }
+
+/*INDEX*/
+.index-colocacion {
+  position: relative;
+  padding: 10px;
+  width: 315px;
+  margin: 50% auto;
+  background: rgba(0, 0, 0, 0.75); }
+
+.letras {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  color: #ffffff; }
+
+.line {
+  display: flex;
+  padding: 5px 0;
+  align-items: center; }
+
+.white-box {
+  background-color: #fff;
+  height: 1.5rem; }
+
+#box-1 {
+  margin: 0 10px;
+  width: 53%; }
+
+#box-2 {
+  margin: 0 10px;
+  width: 47%; }
+
+#box-3 {
+  margin: 0 10px;
+  width: 40%; }
+
+#box-4 {
+  margin: 0 10px;
+  width: 40%; }
+
+#box-5 {
+  margin: 0 10px;
+  width: 45%; }
 
 /*# sourceMappingURL=style.css.map */
