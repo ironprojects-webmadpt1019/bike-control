@@ -10,6 +10,7 @@ buttons.forEach(e => {
       const params = { latitude, longitude, type };
       axios.post("http://localhost:3000/map/add/report", params).then(res => {
         console.log("report created");
+        window.location.href = "/map";
       });
     });
   });
