@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const data = reports.map(e => ({
         type: "Feature",
-        geometry: e.location
+        geometry: e.location,
+        properties: e.properties
       }));
 
       map.addSource("reports", {
@@ -48,7 +49,17 @@ document.addEventListener("DOMContentLoaded", async () => {
               [22, 180]
             ]
           },
-          "circle-color": "#cf000f"
+          "circle-color": [
+            "match",
+            ["get", "incident"],
+            "Theft",
+            "#cf000f",
+            "Damage",
+            "#f9690e",
+            "Other",
+            "#eeee00",
+            "#ccc"
+          ]
         }
       });
     });
