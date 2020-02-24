@@ -16,7 +16,6 @@ router.get(
 
 router.get("/reports", async (req, res, next) => {
   const reports = await Report.find();
-  console.log(reports);
   res.json(reports);
 });
 
@@ -38,11 +37,14 @@ router.post(
   "/add/report",
   ensureLogin.ensureLoggedIn("/auth/login"),
   async (req, res, next) => {
-    const { longitude, latitude } = req.body;
+    const { longitude, latitude, incident } = req.body;
     const newReport = await Report.create({
       location: {
         type: "Point",
         coordinates: [longitude, latitude]
+      },
+      properties: {
+        incident
       }
     });
     res.json({});

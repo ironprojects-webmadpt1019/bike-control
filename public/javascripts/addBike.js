@@ -12,6 +12,7 @@ buttons.forEach(e => {
         .post("http://localhost:3000/user/bikes/location", params)
         .then(res => {
           console.log("bike-park");
+          window.location.href = "/map";
         });
     });
   });

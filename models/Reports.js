@@ -8,6 +8,9 @@ const schema = new mongoose.Schema(
         type: [Number],
         required: false
       }
+    },
+    properties: {
+      incident: { type: String, default: "Theft" }
     }
   },
   {
