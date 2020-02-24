@@ -9,7 +9,7 @@ buttons.forEach(e => {
       console.log("geolocated");
       const { latitude, longitude } = geo.coords;
       const params = { latitude, longitude, incident };
-      axios.post("http://localhost:3000/map/add/report", params).then(res => {
+      axios.post("/map/add/report", params).then(res => {
         console.log("report created");
         window.location.href = "/map";
       });
