@@ -26,4 +26,27 @@ router.get("/bikes", async (req, res, next) => {
   res.json(bikes);
 });
 
+router.get(
+  "/add/report",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  async (req, res, next) => {
+    res.render("user/report/add");
+  }
+);
+
+router.post(
+  "/add/report",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  async (req, res, next) => {
+    const { longitude, latitude } = req.body;
+    const newReport = await Report.create({
+      location: {
+        type: "Point",
+        coordinates: [longitude, latitude]
+      }
+    });
+    res.json({});
+  }
+);
+
 module.exports = router;
