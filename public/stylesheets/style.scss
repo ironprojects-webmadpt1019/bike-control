@@ -202,32 +202,23 @@ nav ul li a:hover {
 
 .add-button span:nth-child(1) {
   top: 0px;
+  transform: rotate(90deg);
 }
 
-.add-button span:nth-child(2),
-.add-button span:nth-child(3) {
-  top: 10px;
-}
-
-.add-button span:nth-child(4) {
-  top: 20px;
+.add-button span:nth-child(2) {
+  top: 0px;
 }
 
 .add-button.active span {
   background-color: #fff;
 }
 
-.add-button.active span:nth-child(1),
-.add-button.active span:nth-child(4) {
-  opacity: 0;
+.add-button.active span:nth-child(1) {
+  transform: rotate(-45deg);
 }
 
 .add-button.active span:nth-child(2) {
-  transform: rotate(45deg);
-}
-
-.add-button.active span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-135deg);
 }
 
 .overlay-add {
