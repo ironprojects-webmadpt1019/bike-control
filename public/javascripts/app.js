@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             "Other",
             "#eeee00",
             "#ccc"
-          ]
+          ],
+          "circle-opacity": 0.5
         }
       });
     });
@@ -91,7 +92,8 @@ document.addEventListener("DOMContentLoaded", async () => {
               [22, 180]
             ]
           },
-          "circle-color": "#00e640"
+          "circle-color": "#00e640",
+          "circle-opacity": 0.8
         }
       });
     });

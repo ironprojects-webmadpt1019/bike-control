@@ -345,3 +345,25 @@ nav ul li a:hover {
   margin: 0 10px;
   width: 45%;
 }
+
+// report page
+.report-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .report {
+    padding: 10px;
+    margin: 0;
+    font-family: "Raleway";
+    font-size: 2rem;
+    color: #fff;
+  }
+}
