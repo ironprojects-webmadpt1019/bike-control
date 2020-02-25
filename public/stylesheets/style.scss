@@ -360,6 +360,7 @@ nav ul li a:hover {
   height: 20px;
   color: white;
   width: 160px;
+  text-align: center;
 }
 #password {
   border: none;
@@ -368,6 +369,7 @@ nav ul li a:hover {
   height: 20px;
   color: white;
   width: 160px;
+  text-align: center;
 }
 #name {
   border: none;
@@ -376,6 +378,7 @@ nav ul li a:hover {
   height: 20px;
   color: white;
   width: 160px;
+  text-align: center;
 }
 #lastName {
   border: none;
@@ -384,6 +387,7 @@ nav ul li a:hover {
   height: 20px;
   color: white;
   width: 160px;
+  text-align: center;
 }
 #modelBike {
   border: none;
@@ -392,6 +396,7 @@ nav ul li a:hover {
   height: 20px;
   color: white;
   width: 160px;
+  text-align: center;
 }
 input:focus {
   outline: none;
@@ -402,13 +407,13 @@ input:focus {
   text-align: center;
 }
 .boton {
-  color: #fff !important;
+  color: black !important;
   font-size: 20px;
   font-weight: 500;
-  padding: 0.5em 1.2em;
-  background: #318aac;
+  padding: 0.5em 0.44em;
+  // background: #318aac;
   border: 2px solid;
-  border-color: #318aac;
+  // border-color: #318aac;
   margin-top: 15px;
   position: relative;
 }
@@ -419,7 +424,7 @@ input:focus {
   left: 0px;
   width: 0px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: #a5a5a5;
   transition: all 1s ease;
 }
 .boton:hover:before {
@@ -430,4 +435,27 @@ input:focus {
   justify-content: center;
   align-content: center;
   margin-top: 7px;
+}
+.settings-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px;
+}
+.settings-button {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 7px;
+}
+.boton-settings {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 0.44em;
+  /* background: #318aac; */
+  border: 2px solid;
+  /* border-color: #318aac; */
+  margin-top: 15px;
+  position: relative;
 }
