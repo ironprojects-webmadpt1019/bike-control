@@ -291,4 +291,88 @@ nav ul li a:hover {
   margin: 0 10px;
   width: 45%; }
 
+.register-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px; }
+
+#username {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px; }
+
+#password {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px; }
+
+#name {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px; }
+
+#lastName {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px; }
+
+#modelBike {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px; }
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid white; }
+
+::placeholder {
+  color: white;
+  text-align: center; }
+
+.boton {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  border: 2px solid;
+  border-color: #318aac;
+  margin-top: 15px;
+  position: relative; }
+
+.boton:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease; }
+
+.boton:hover:before {
+  width: 100%; }
+
+.login-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px; }
+
 /*# sourceMappingURL=style.css.map */
