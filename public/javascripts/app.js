@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       });
       map.addLayer({
-        id: "population",
+        id: "reports",
         type: "circle",
         source: "reports",
         paint: {
@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", async () => {
           "circle-opacity": 0.5
         }
       });
+      map.on("click", "reports", function(e) {
+        new mapboxgl.Popup()
+          .setLngLat(e.features[0].geometry.coordinates)
+          .setHTML(e.features[0].properties.incident)
+          .addTo(map);
+      });
     });
 
     //paint UserBikess
@@ -70,7 +76,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       const bikes = res.data;
       const data = bikes.map(e => ({
         type: "Feature",
-        geometry: e.location
+        geometry: e.location,
+        properties: { model: e.model }
       }));
       map.addSource("bikes", {
         type: "geojson",
@@ -96,6 +103,68 @@ document.addEventListener("DOMContentLoaded", async () => {
           "circle-opacity": 0.8
         }
       });
+      map.on("click", "bikes", function(e) {
+        new mapboxgl.Popup()
+          .setLngLat(e.features[0].geometry.coordinates)
+          .setHTML("Your bike " + e.features[0].properties.model)
+          .addTo(map);
+      });
     });
   });
 });
+
+/*
+map.addLayer(
+        {
+          id: "reports-heat",
+          type: "heatmap",
+          source: "reports",
+          maxzoom: 15,
+          paint: {
+            // increase weight as diameter breast height increases
+            "heatmap-weight": {
+              property: "dbh",
+              type: "exponential",
+              stops: [
+                [1, 0],
+                [62, 1]
+              ]
+            },
+            // increase intensity as zoom level increases
+            "heatmap-intensity": {
+              stops: [
+                [11, 1],
+                [15, 3]
+              ]
+            },
+            // assign color values be applied to points depending on their density
+            "heatmap-color": [
+              "interpolate",
+              ["linear"],
+              ["heatmap-density"],
+              0,
+              "rgba(245, 229, 27, 0)",
+              0.5,
+              "#f9690e",
+              0.9,
+              "rgba(207, 0, 15, 1)"
+            ],
+            // increase radius as zoom increases
+            "heatmap-radius": {
+              stops: [
+                [11, 15],
+                [15, 20]
+              ]
+            },
+            // decrease opacity to transition into the circle layer
+            "heatmap-opacity": {
+              default: 1,
+              stops: [
+                [14, 1],
+                [15, 0]
+              ]
+            }
+          }
+        },
+        "waterway-label"
+      );*/
