@@ -351,26 +351,15 @@ input:focus {
   text-align: center; }
 
 .boton {
-  color: black !important;
-  font-size: 20px;
+  color: white;
+  font-size: 14px;
   font-weight: 500;
   padding: 0.5em 0.44em;
   border: 2px solid;
+  font-family: "Raleway";
+  background-color: transparent;
   margin-top: 15px;
   position: relative; }
-
-.boton:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0px;
-  height: 100%;
-  background: #a5a5a5;
-  transition: all 1s ease; }
-
-.boton:hover:before {
-  width: 100%; }
 
 .login-flex {
   display: flex;
@@ -400,5 +389,11 @@ input:focus {
   /* border-color: #318aac; */
   margin-top: 15px;
   position: relative; }
+
+input:-internal-autofill-selected {
+  background-color: transparent; }
+
+input[type="submit"]:hover {
+  color: black; }
 
 /*# sourceMappingURL=style.css.map */

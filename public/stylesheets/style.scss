@@ -407,29 +407,33 @@ input:focus {
   text-align: center;
 }
 .boton {
-  color: black !important;
-  font-size: 20px;
+  color: white;
+  font-size: 14px;
   font-weight: 500;
   padding: 0.5em 0.44em;
-  // background: #318aac;
   border: 2px solid;
+  font-family: "Raleway";
+  background-color: transparent;
+  // background: #a5a5a5;
+  // background: #d1d1e8;
   // border-color: #318aac;
   margin-top: 15px;
   position: relative;
 }
-.boton:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0px;
-  height: 100%;
-  background: #a5a5a5;
-  transition: all 1s ease;
-}
-.boton:hover:before {
-  width: 100%;
-}
+// .boton:before {
+//   content: "";
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   width: 0px;
+//   height: 100%;
+//   background: #f5f1ff;
+//   color: black;
+//   transition: all 1s ease;
+// }
+// .boton:hover:before {
+//   width: 100%;
+// }
 .login-flex {
   display: flex;
   justify-content: center;
@@ -458,4 +462,11 @@ input:focus {
   /* border-color: #318aac; */
   margin-top: 15px;
   position: relative;
+}
+input:-internal-autofill-selected {
+  background-color: transparent;
+}
+input[type="submit"]:hover {
+  color: black;
+  //you can add more styles to be applied on hover
 }
