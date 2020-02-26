@@ -8,12 +8,10 @@ buttons.forEach(e => {
       console.log("geolocated");
       const { latitude, longitude } = geo.coords;
       const params = { latitude, longitude, id };
-      axios
-        .post("http://localhost:3000/user/bikes/location", params)
-        .then(res => {
-          console.log("bike-park");
-          window.location.href = "/map";
-        });
+      axios.post("/user/bikes/location", params).then(res => {
+        console.log("bike-park");
+        window.location.href = "/map";
+      });
     });
   });
 });

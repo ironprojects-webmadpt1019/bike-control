@@ -2,16 +2,16 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoibHVpc21pZmVpam9vIiwiYSI6ImNrNm5mZzI0aDBycHQzbnFzd2Z1MXZmbm8ifQ.ayNgeiCCTcCoVcZ-0aagPQ";
 
 window.reportsApi = axios.create({
-  baseURL: "http://localhost:3000/map/reports",
+  baseURL: "/map/reports",
   timeout: 5000
 });
 window.bikesApi = axios.create({
-  baseURL: "http://localhost:3000/map/bikes",
+  baseURL: "/map/bikes",
   timeout: 5000
 });
 
 window.locationApi = axios.create({
-  baseURL: "http://localhost:3000/user/bikes/location",
+  baseURL: "/user/bikes/location",
   timeout: 5000
 });
 
