@@ -292,6 +292,112 @@ nav ul li a:hover {
   margin: 0 10px;
   width: 45%; }
 
+
+.register-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px; }
+
+#username {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px;
+  text-align: center; }
+
+#password {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px;
+  text-align: center; }
+
+#name {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px;
+  text-align: center; }
+
+#lastName {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px;
+  text-align: center; }
+
+#modelBike {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  height: 20px;
+  color: white;
+  width: 160px;
+  text-align: center; }
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid white; }
+
+::placeholder {
+  color: white;
+  text-align: center; }
+
+.boton {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5em 0.44em;
+  border: 2px solid;
+  font-family: "Raleway";
+  background-color: transparent;
+  margin-top: 15px;
+  position: relative; }
+
+.login-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px; }
+
+.settings-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7px; }
+
+.settings-button {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 7px; }
+
+.boton-settings {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 0.44em;
+  /* background: #318aac; */
+  border: 2px solid;
+  /* border-color: #318aac; */
+  margin-top: 15px;
+  position: relative; }
+
+input:-internal-autofill-selected {
+  background-color: transparent; }
+
+input[type="submit"]:hover {
+  color: black; }
+
 .report-page {
   position: absolute;
   top: 0;
@@ -367,5 +473,6 @@ nav ul li a:hover {
           font-size: 1rem; }
           .bike-page .bike .content .buttons .btn span {
             font-size: 1px; }
+
 
 /*# sourceMappingURL=style.css.map */

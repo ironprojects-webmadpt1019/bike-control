@@ -1,14 +1,18 @@
-<form method="POST">
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input type="email" class="form-control" id="username" name="username" required>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" required>
-  </div>
-  {{#if errors}}
-  {{> errors}}
-  {{/if}}
-  <button type="submit" class="btn btn-primary">Log in</button>
-</form>
+<div class="index-colocacion">
+  <form method="POST">
+    <div class="form-group login-flex">
+      {{!-- <label for="username">Username</label> --}}
+      <input type="email" class="form-control" id="username" name="username" placeholder="Email" required>
+    </div>
+    <div class="form-group login-flex">
+      {{!-- <label for="password">Password</label> --}}
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+    </div>
+    {{#if errors}}
+    {{> errors}}
+    {{/if}}
+    <div class="login-flex">
+      <button type="submit" class="boton">Log in</button>
+    </div>
+  </form>
+</div>
