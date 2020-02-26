@@ -247,7 +247,8 @@ nav ul li a:hover {
   animation-delay: 0.35s; }
 
 .hide {
-  visibility: hidden; }
+  visibility: hidden;
+  width: 0px; }
 
 /*INDEX*/
 .index-colocacion {
@@ -290,5 +291,81 @@ nav ul li a:hover {
 #box-5 {
   margin: 0 10px;
   width: 45%; }
+
+.report-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .report-page .report {
+    padding: 10px;
+    margin: 0;
+    font-family: "Raleway";
+    font-size: 2rem;
+    color: #fff; }
+
+.bike-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .bike-page .btn-add {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem; }
+  .bike-page .bike {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    color: #fff;
+    font-size: 2rem;
+    display: flex; }
+    .bike-page .bike .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .bike-page .bike .content .title {
+        margin: 0; }
+      .bike-page .bike .content .buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; }
+        .bike-page .bike .content .buttons .edit {
+          display: flex; }
+          .bike-page .bike .content .buttons .edit a {
+            padding: 0 6px 10px; }
+          .bike-page .bike .content .buttons .edit .btn-edit {
+            font-family: "Raleway";
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none; }
+        .bike-page .bike .content .buttons .btn {
+          font-family: "Raleway";
+          font-size: 20px !important;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 1rem; }
+          .bike-page .bike .content .buttons .btn span {
+            font-size: 1px; }
 
 /*# sourceMappingURL=style.css.map */
