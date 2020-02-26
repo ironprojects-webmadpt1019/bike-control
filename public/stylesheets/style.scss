@@ -449,27 +449,27 @@ input:focus {
 }
 .settings-button {
   display: flex;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: center;
+  align-content: center;
   margin-top: 7px;
 }
 .boton-settings {
-  color: black;
-  font-size: 20px;
+  color: white;
+  font-size: 14px;
   font-weight: 500;
   padding: 0.5em 0.44em;
-  /* background: #318aac; */
   border: 2px solid;
-  /* border-color: #318aac; */
+  font-family: "Raleway";
+  background-color: transparent;
+  // background: #a5a5a5;
+  // background: #d1d1e8;
+  // border-color: #318aac;
   margin-top: 15px;
-  position: relative;
 }
 input:-internal-autofill-selected {
   background-color: transparent;
 }
-input[type="submit"]:hover {
-  color: black;
-  //you can add more styles to be applied on hover
+//you can add more styles to be applied on hover
 
 // report page
 .report-page {
