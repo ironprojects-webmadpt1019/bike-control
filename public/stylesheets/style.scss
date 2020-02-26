@@ -295,6 +295,7 @@ nav ul li a:hover {
 
 .hide {
   visibility: hidden;
+  width: 0px;
 }
 
 /*INDEX*/
@@ -365,5 +366,74 @@ nav ul li a:hover {
     font-family: "Raleway";
     font-size: 2rem;
     color: #fff;
+  }
+}
+
+.bike-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btn-add {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  .bike {
+    margin: 10px;
+    background-color: rgba($color: #fff, $alpha: 0.3);
+    padding: 10px;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        margin: 0;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .edit {
+          display: flex;
+          a {
+            padding: 0 6px 10px;
+          }
+          .btn-edit {
+            font-family: "Raleway";
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+        .btn {
+          font-family: "Raleway";
+          font-size: 20px !important;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 1rem;
+          span {
+            font-size: 1px;
+          }
+        }
+      }
+    }
   }
 }
