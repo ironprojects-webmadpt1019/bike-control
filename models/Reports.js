@@ -26,4 +26,6 @@ const schema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("reports", schema);
+const schhemaWithIndex = schema.index({ location: "2dsphere" });
+
+module.exports = mongoose.model("reports", schhemaWithIndex);

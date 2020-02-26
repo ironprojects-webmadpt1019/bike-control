@@ -1,8 +1,26 @@
 <script src="../javascripts/map.js"></script>
-{{#each bikes}}
-{{>bike}}
-{{/each}}
+<div class="bike-page">
+  {{#each bikes}}
+  {{>bike}}
+  {{/each}}
+  <a href="/user/bikes/add" class="btn-add">Add a bike</a>
+</div>
 
 
-<a href="/user/bikes/add" class="btn btn-primary">Add a bike</a>
+<div class="modal">
+
+
+
+  <h1>Are you sure?</h1>
+  <p>We have a lot of reports on this zone, so watch out!</p>
+  <div class="confirm">
+    <a title="Close" class="modal-no">No</a>
+    <a title="Close" class="modal-yes">Yes</a>
+  </div>
+
+
+
+</div>
+
+
 <script src="../javascripts/addBike.js"></script>

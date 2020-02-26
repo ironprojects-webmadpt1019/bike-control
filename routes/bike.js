@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const Bike = require("../models/Bike");
+const Report = require("../models/Reports");
 
 router.get("/", async (req, res, next) => {
   const loggedUser = req.user;
@@ -75,6 +76,23 @@ router.post("/location", async (req, res, next) => {
   bike.location.coordinates = [longitude, latitude];
   await bike.save();
   res.json({});
+});
+
+router.post("/location/check", async (req, res, next) => {
+  const { id, longitude, latitude } = req.body;
+  const bike = await Bike.findById(id);
+  const reports = await Report.find({
+    location: {
+      $near: {
+        $geometry: { type: "Point", coordinates: [longitude, latitude] },
+        $maxDistance: 2000, //2km
+        $minDistance: 0
+      }
+    }
+  });
+  //bike.location.coordinates = [longitude, latitude];
+  //await bike.save();
+  res.json({ reports });
 });
 
 module.exports = router;
