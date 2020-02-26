@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           id: "reports-heat",
           type: "heatmap",
           source: "reports",
-          maxzoom: 15,
+          maxzoom: 14,
           paint: {
             // increase weight as diameter breast height increases
             "heatmap-weight": {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             "heatmap-intensity": {
               stops: [
                 [11, 1],
-                [15, 3]
+                [14, 3]
               ]
             },
             // assign color values be applied to points depending on their density
@@ -92,25 +92,29 @@ document.addEventListener("DOMContentLoaded", async () => {
               ["linear"],
               ["heatmap-density"],
               0,
-              "rgba(245, 229, 27, 0)",
-              0.5,
-              "#f9690e",
-              0.9,
+              "rgba(240, 255, 0, 0)",
+              0.2,
+              "rgba(249, 191, 59, 1)",
+              0.4,
+              "rgba(243, 156, 18, 1)",
+              0.6,
+              "rgba(249, 105, 14, 1)",
+              0.8,
               "rgba(207, 0, 15, 1)"
             ],
             // increase radius as zoom increases
             "heatmap-radius": {
               stops: [
                 [11, 15],
-                [15, 20]
+                [14, 20]
               ]
             },
             // decrease opacity to transition into the circle layer
             "heatmap-opacity": {
               default: 1,
               stops: [
-                [14, 1],
-                [15, 0]
+                [13, 1],
+                [14, 0]
               ]
             }
           }

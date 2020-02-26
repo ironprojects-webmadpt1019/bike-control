@@ -469,4 +469,29 @@ input:-internal-autofill-selected {
           .bike-page .bike .content .buttons .btn span {
             font-size: 1px; }
 
+.modal {
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s; }
+  .modal .confirm {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    color: #000; }
+  .modal a {
+    color: #000;
+    text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map */
