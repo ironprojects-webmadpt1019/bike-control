@@ -1,25 +1,24 @@
-<div class="index-colocacion">
+<div class="form-wrapper">
   <form method="POST">
-    <div class="form-group register-flex">
+    <div class="register-flex">
       {{!-- <label for="username">Email</label> --}}
-      <input type="email" class="form-control" id="username" name="username" placeholder="Email" required>
+      <input type="email" class="input" id="username" name="username" placeholder="Email" required>
     </div>
-    <div class="form-group register-flex">
+    <div class="register-flex">
       {{!-- <label for="password">Password</label> --}}
-      <input type="password" class="form-control" id="password" name="password" placeholder="password" minlength="4"
-        required>
+      <input type="password" class="input" id="password" name="password" placeholder="Password" minlength="4" required>
     </div>
-    <div class="form-group register-flex">
+    <div class="register-flex">
       {{!-- <label for="name">First name</label> --}}
-      <input type="text" class="form-control" id="name" name="firstName" placeholder="First name">
+      <input type="text" class="input" id="name" name="firstName" placeholder="First name">
     </div>
-    <div class="form-group register-flex">
+    <div class="register-flex">
       {{!-- <label for="name">Last name</label> --}}
-      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name">
+      <input type="text" class="input" id="lastName" name="lastName" placeholder="Last name">
     </div>
-    <div class="form-group register-flex">
+    <div class="register-flex">
       {{!-- <label for="modelBike">Add a bike</label> --}}
-      <input type="text" class="form-control" id="modelBike" name="modelBike" placeholder="Bike model">
+      <input type="text" class="input" id="modelBike" name="modelBike" placeholder="Bike model">
     </div>
     {{#if errors}}
     {{> errors}}

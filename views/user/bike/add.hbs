@@ -1,10 +1,14 @@
-<form method="POST">
-  {{#if errors}}
-  {{>errors}}
-  {{/if}}
-  <div class="form-group">
-    <label for="model">Model</label>
-    <input type="text" class="form-control" id="model" name="modelBike" value="{{this.model}}">
-  </div>
-  <button type="submit" class="btn btn-primary">Add</button>
-</form>
+<div class="form-wrapper">
+  <form method="POST">
+    {{#if errors}}
+    {{>errors}}
+    {{/if}}
+    <div class="form-group login-flex">
+      {{!-- <label for="username">Username</label> --}}
+      <input type="text" class="input" id="modelBike" name="modelBike" placeholder="bike model" required>
+    </div>
+    <div class="login-flex">
+      <button type="submit" class="boton">Add</button>
+    </div>
+  </form>
+</div>
