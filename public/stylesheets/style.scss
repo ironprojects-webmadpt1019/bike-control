@@ -358,6 +358,23 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  .input {
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    height: 20px;
+    color: white;
+    width: 80vw;
+    max-width: 500px;
+    text-align: center;
+  }
+  .input-error {
+    font-size: 0.8rem;
+    color: #cf000f;
+    width: 80vw;
+    text-align: center;
+  }
 }
 
 .register-flex {
@@ -367,51 +384,6 @@ nav ul li a:hover {
   margin-top: 7px;
 }
 
-#username {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center;
-}
-#password {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center;
-}
-#name {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center;
-}
-#lastName {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center;
-}
-#modelBike {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center;
-}
 input:focus {
   outline: none;
   border-bottom: 1px solid white;
