@@ -1,15 +1,16 @@
-<form method="POST">
-  {{#if errors}}
-  {{>errors}}
-  {{/if}}
-  {{#with bike}}
-  <div class="form-group">
-    <label for="model">{{model}}</label>
-    <input type="text" class="form-control" id="model" name="modelBike" value="{{model}}">
-  </div>
-
-  <a href="#"><button type="button" class="btn btn-success">Add Location</button></a>
-
-  <button type="submit" class="btn btn-primary">Update</button>
-  {{/with}}
-</form>
+<div class="form-wrapper">
+  <form method="POST">
+    {{#if errors}}
+    {{>errors}}
+    {{/if}}
+    {{#with bike}}
+    <div class="form-group login-flex">
+      {{!-- <label for="username">Username</label> --}}
+      <input type="text" class="form-control" id="modelBike" name="modelBike" value="{{model}}" required>
+    </div>
+    <div class="login-flex">
+      <button type="submit" class="boton">Update</button>
+    </div>
+    {{/with}}
+  </form>
+</div>

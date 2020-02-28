@@ -292,6 +292,17 @@ nav ul li a:hover {
   margin: 0 10px;
   width: 45%; }
 
+.form-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .register-flex {
   display: flex;
   justify-content: center;
