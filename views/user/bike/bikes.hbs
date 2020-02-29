@@ -5,17 +5,9 @@
   {{/each}}
   <a href="/user/bikes/add" class="btn-add">Add a bike</a>
 </div>
-<div class="wrapper"></div>
 
-<div class="modal">
-  <h2></h2>
-  <p></p>
-  <div class="confirm">
-    <a title="Close" class="modal-no">No way!</a>
-    <a title="Close" class="modal-yes">Yes!</a>
-  </div>
-</div>
-
+{{>modal}}
 {{>spinner}}
 
 <script src="../javascripts/addBike.js"></script>
+<script src="../javascripts/deleteBike.js"></script>
