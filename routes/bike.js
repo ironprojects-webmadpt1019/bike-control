@@ -90,7 +90,7 @@ router.post("/location/check", async (req, res, next) => {
       location: {
         $near: {
           $geometry: { type: "Point", coordinates: [longitude, latitude] },
-          $maxDistance: 1000, //2km
+          $maxDistance: 1000, //1km
           $minDistance: 0
         }
       }
