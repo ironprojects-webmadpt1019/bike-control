@@ -14,16 +14,32 @@ router.get(
   }
 );
 
-router.get("/reports", async (req, res, next) => {
-  const reports = await Report.find();
-  res.json(reports);
-});
+router.get(
+  "/reports",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  async (req, res, next) => {
+    try {
+      const reports = await Report.find();
+      return res.json(reports);
+    } catch (e) {
+      next(e);
+    }
+  }
+);
 
-router.get("/bikes", async (req, res, next) => {
-  const loggedUser = req.user;
-  const bikes = await Bike.find({ owner: loggedUser._id });
-  res.json(bikes);
-});
+router.get(
+  "/bikes",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  async (req, res, next) => {
+    const loggedUser = req.user;
+    try {
+      const bikes = await Bike.find({ owner: loggedUser._id });
+      return res.json(bikes);
+    } catch (e) {
+      next(e);
+    }
+  }
+);
 
 router.get(
   "/add/report",
@@ -38,16 +54,20 @@ router.post(
   ensureLogin.ensureLoggedIn("/auth/login"),
   async (req, res, next) => {
     const { longitude, latitude, incident } = req.body;
-    const newReport = await Report.create({
-      location: {
-        type: "Point",
-        coordinates: [longitude, latitude]
-      },
-      properties: {
-        incident
-      }
-    });
-    res.json({});
+    try {
+      const newReport = await Report.create({
+        location: {
+          type: "Point",
+          coordinates: [longitude, latitude]
+        },
+        properties: {
+          incident
+        }
+      });
+      return res.json({});
+    } catch (e) {
+      next(e);
+    }
   }
 );
 
