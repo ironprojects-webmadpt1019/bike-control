@@ -416,7 +416,10 @@ input:-internal-autofill-selected {
     padding: 10px;
     color: #fff;
     font-size: 2rem;
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    max-width: 300px; }
     .bike-page .bike .content {
       display: flex;
       flex-direction: column;
@@ -424,7 +427,9 @@ input:-internal-autofill-selected {
       align-items: center;
       padding: 10px; }
       .bike-page .bike .content .title {
-        margin: 0; }
+        margin: 0;
+        font-size: 2rem;
+        font-family: "Raleway"; }
       .bike-page .bike .content .buttons {
         display: flex;
         justify-content: center;
