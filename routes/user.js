@@ -13,15 +13,20 @@ router.post("/settings", async (req, res, next) => {
   const { username, firstName, lastName } = req.body;
   const loggedUser = req.user;
 
+  const existingUser = await User.findOne({ username });
   // Update user in database
-  loggedUser.username = username;
-  loggedUser.name.first = firstName;
-  loggedUser.name.last = lastName;
+  if (!existingUser) {
+    loggedUser.username = username;
+    loggedUser.name.first = firstName;
+    loggedUser.name.last = lastName;
 
-  await loggedUser.save();
-
-  req.flash("error", "Updated user!");
-  res.redirect("/user/settings");
+    await loggedUser.save();
+    req.flash("error", "Updated user!");
+    return res.redirect("/user/settings");
+  } else {
+    req.flash("error", "That username is taken!");
+    return res.redirect("/user/settings");
+  }
 });
 
 const bike = require("./bike");

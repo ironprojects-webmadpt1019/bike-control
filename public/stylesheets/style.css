@@ -292,56 +292,37 @@ nav ul li a:hover {
   margin: 0 10px;
   width: 45%; }
 
+.form-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .form-wrapper .input {
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    height: 20px;
+    color: white;
+    width: 80vw;
+    max-width: 500px;
+    text-align: center; }
+  .form-wrapper .input-error {
+    font-size: 0.8rem;
+    color: #cf000f;
+    width: 80vw;
+    text-align: center; }
+
 .register-flex {
   display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 7px; }
-
-#username {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center; }
-
-#password {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center; }
-
-#name {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center; }
-
-#lastName {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center; }
-
-#modelBike {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid white;
-  height: 20px;
-  color: white;
-  width: 160px;
-  text-align: center; }
 
 input:focus {
   outline: none;
@@ -440,7 +421,8 @@ input:-internal-autofill-selected {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 10px; }
       .bike-page .bike .content .title {
         margin: 0; }
       .bike-page .bike .content .buttons {
@@ -459,15 +441,25 @@ input:-internal-autofill-selected {
             text-decoration: none; }
         .bike-page .bike .content .buttons .btn {
           font-family: "Raleway";
-          font-size: 20px !important;
           padding: 15px;
           display: flex;
           flex-direction: column;
           color: #ffffff;
           text-decoration: none;
-          font-size: 1rem; }
+          font-size: 1.2rem; }
           .bike-page .bike .content .buttons .btn span {
             font-size: 1px; }
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s, visibility 0.1s; }
 
 .modal {
   padding: 20px;
@@ -476,7 +468,7 @@ input:-internal-autofill-selected {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -484,14 +476,104 @@ input:-internal-autofill-selected {
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s; }
+  transition: opacity 0.1s, visibility 0.1s; }
+  .modal h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 5px; }
+  .modal p {
+    font-size: 1.2rem;
+    padding: 5px; }
   .modal .confirm {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    color: #000; }
-  .modal a {
+    width: 60%;
     color: #000;
-    text-decoration: none; }
+    margin: 20px 0px; }
+    .modal .confirm a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0 10px; }
+    .modal .confirm .modal-no {
+      color: #8f8f8f; }
+
+.spinner {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s, visibility 0.1s; }
+
+@keyframes ldio-cj1egkppkcc {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.ldio-cj1egkppkcc div {
+  box-sizing: border-box !important; }
+
+.ldio-cj1egkppkcc > div {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  top: 40%;
+  left: 40%;
+  border-radius: 50%;
+  border: 2px solid #000;
+  border-color: #000000 transparent #000000 transparent;
+  animation: ldio-cj1egkppkcc 1s linear infinite; }
+
+.ldio-cj1egkppkcc > div:nth-child(2) {
+  border-color: transparent; }
+
+.ldio-cj1egkppkcc > div:nth-child(2) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg); }
+
+.ldio-cj1egkppkcc > div:nth-child(2) div:before,
+.ldio-cj1egkppkcc > div:nth-child(2) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: -2px;
+  left: 34px;
+  background: #000000;
+  border-radius: 50%;
+  box-shadow: 0 72px 0 0 #000000; }
+
+.ldio-cj1egkppkcc > div:nth-child(2) div:after {
+  left: -2px;
+  top: 34px;
+  box-shadow: 72px 0 0 0 #000000; }
+
+.loadingio-spinner-dual-ring-2fgbvnty5yw {
+  width: 90%;
+  height: 35%;
+  display: inline-block;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0); }
+
+.ldio-cj1egkppkcc {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  /* see note above */ }
+
+.ldio-cj1egkppkcc div {
+  box-sizing: content-box; }
+
+/* generated by https://loading.io/ */
 
 /*# sourceMappingURL=style.css.map */

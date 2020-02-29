@@ -33,7 +33,7 @@ router.post(
     ) {
       req.flash(
         "error",
-        "You have to fill the required fields (username, name and password"
+        "You have to fill the required fields (username, name and password)"
       );
       return res.redirect("/auth/register");
     } else {
@@ -51,8 +51,12 @@ router.post(
               owner: username
             });
           }
-          console.log(strength(password));
-          return res.redirect("/");
+          req.login(newUser, function(err) {
+            if (err) {
+              console.log(err);
+            }
+            return res.redirect("/map");
+          });
         } else if (strength(password) < 3) {
           req.flash(
             "error",

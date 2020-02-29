@@ -80,7 +80,7 @@ app.use((req, res, next) => {
 
 // Set the title globally
 
-app.locals.title = "Bike-Contol";
+app.locals.title = "bike-control";
 
 // Require the index router, he will make charge of the other routers
 
