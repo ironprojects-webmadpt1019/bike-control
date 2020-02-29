@@ -504,6 +504,9 @@ input:-internal-autofill-selected {
     color: #fff;
     font-size: 2rem;
     display: flex;
+    justify-content: center;
+    width: 60%;
+    max-width: 300px;
     .content {
       display: flex;
       flex-direction: column;
@@ -512,6 +515,8 @@ input:-internal-autofill-selected {
       padding: 10px;
       .title {
         margin: 0;
+        font-size: 2rem;
+        font-family: "Raleway";
       }
       .buttons {
         display: flex;
