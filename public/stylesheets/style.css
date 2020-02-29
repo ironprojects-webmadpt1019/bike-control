@@ -439,6 +439,9 @@ input:-internal-autofill-selected {
             font-size: 1rem;
             color: #ffffff;
             text-decoration: none; }
+            .bike-page .bike .content .buttons .edit .btn-edit span {
+              visibility: hidden;
+              font-size: 0.1px; }
         .bike-page .bike .content .buttons .btn {
           font-family: "Raleway";
           padding: 15px;

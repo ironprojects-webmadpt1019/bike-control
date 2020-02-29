@@ -528,6 +528,10 @@ input:-internal-autofill-selected {
             font-size: 1rem;
             color: #ffffff;
             text-decoration: none;
+            span {
+              visibility: hidden;
+              font-size: 0.1px;
+            }
           }
         }
         .btn {
