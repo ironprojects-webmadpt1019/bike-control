@@ -533,6 +533,7 @@ input:-internal-autofill-selected {
         .btn {
           font-family: "Raleway";
           padding: 15px;
+          -webkit-appearance: none;
           display: flex;
           flex-direction: column;
           color: #ffffff;
