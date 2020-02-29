@@ -412,14 +412,14 @@ input:-internal-autofill-selected {
     font-size: 1.5rem; }
   .bike-page .bike {
     margin: 10px;
+    width: 60%;
+    max-width: 300px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
     color: #fff;
     font-size: 2rem;
     display: flex;
-    justify-content: center;
-    width: 60%;
-    max-width: 300px; }
+    justify-content: center; }
     .bike-page .bike .content {
       display: flex;
       flex-direction: column;
@@ -475,6 +475,7 @@ input:-internal-autofill-selected {
   transition: opacity 0.1s, visibility 0.1s; }
 
 .modal {
+  font-family: "Raleway";
   padding: 20px;
   position: absolute;
   text-align: center;
@@ -490,10 +491,9 @@ input:-internal-autofill-selected {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.1s, visibility 0.1s; }
-  .modal h2 {
-    margin: 0;
+  .modal .title {
     font-size: 1.8rem;
-    padding: 5px; }
+    padding: 2px; }
   .modal p {
     font-size: 1.2rem;
     padding: 5px; }
