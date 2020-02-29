@@ -442,7 +442,11 @@ input:-internal-autofill-selected {
         .bike-page .bike .content .buttons .btn {
           font-family: "Raleway";
           padding: 15px;
+          background-color: transparent;
+          border: none;
           -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           display: flex;
           flex-direction: column;
           color: #ffffff;
