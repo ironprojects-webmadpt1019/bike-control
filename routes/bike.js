@@ -72,27 +72,35 @@ router.get("/delete/:id", async (req, res, next) => {
 //lcoation Bikes
 router.post("/location", async (req, res, next) => {
   const { id, longitude, latitude } = req.body;
-  const bike = await Bike.findById(id);
-  bike.location.coordinates = [longitude, latitude];
-  await bike.save();
-  res.json({});
+  try {
+    const bike = await Bike.findById(id);
+    bike.location.coordinates = [longitude, latitude];
+    await bike.save();
+    return res.json({});
+  } catch (e) {
+    next();
+  }
 });
 
 router.post("/location/check", async (req, res, next) => {
   const { id, longitude, latitude } = req.body;
-  const bike = await Bike.findById(id);
-  const reports = await Report.find({
-    location: {
-      $near: {
-        $geometry: { type: "Point", coordinates: [longitude, latitude] },
-        $maxDistance: 2000, //2km
-        $minDistance: 0
+  try {
+    const bike = await Bike.findById(id);
+    const reports = await Report.find({
+      location: {
+        $near: {
+          $geometry: { type: "Point", coordinates: [longitude, latitude] },
+          $maxDistance: 2000, //2km
+          $minDistance: 0
+        }
       }
-    }
-  });
-  //bike.location.coordinates = [longitude, latitude];
-  //await bike.save();
-  res.json({ reports });
+    });
+    //bike.location.coordinates = [longitude, latitude];
+    //await bike.save();
+    return res.json({ reports });
+  } catch (e) {
+    next(e);
+  }
 });
 
 module.exports = router;
