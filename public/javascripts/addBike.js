@@ -22,7 +22,7 @@ buttons.forEach(e => {
         const incidents = res.data.reports;
         if (incidents.length >= 5) {
           spin.style.visibility = "hidden";
-          title.innerHTML = `There are ${incidents.length} reported issues within 2km`;
+          title.innerHTML = `There are ${incidents.length} reported issues within 1km`;
           msg.innerHTML = "Are you sure you want to park here?";
           modal.style.visibility = "initial";
           modal.style.opacity = "1";
@@ -33,7 +33,7 @@ buttons.forEach(e => {
           });
         } else {
           spin.style.visibility = "hidden";
-          title.innerHTML = `There are only ${incidents.length} reported issues within 2km`;
+          title.innerHTML = `There are only ${incidents.length} reported issues within 1km`;
           msg.innerHTML =
             "You're probably safe, if anything happens do not hessitate to report it";
           yes.innerHTML = "Ok!";

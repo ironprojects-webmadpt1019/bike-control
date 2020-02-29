@@ -499,11 +499,14 @@ input:-internal-autofill-selected {
   }
   .bike {
     margin: 10px;
+    width: 60%;
+    max-width: 300px;
     background-color: rgba($color: #fff, $alpha: 0.3);
     padding: 10px;
     color: #fff;
     font-size: 2rem;
     display: flex;
+    justify-content: center;
     .content {
       display: flex;
       flex-direction: column;
@@ -512,6 +515,8 @@ input:-internal-autofill-selected {
       padding: 10px;
       .title {
         margin: 0;
+        font-size: 2rem;
+        font-family: "Raleway";
       }
       .buttons {
         display: flex;
@@ -570,6 +575,7 @@ input:-internal-autofill-selected {
 
 //modal on bikes
 .modal {
+  font-family: "Raleway";
   padding: 20px;
   position: absolute;
   text-align: center;
@@ -585,10 +591,9 @@ input:-internal-autofill-selected {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.1s, visibility 0.1s;
-  h2 {
-    margin: 0;
+  .title {
     font-size: 1.8rem;
-    padding: 5px;
+    padding: 2px;
   }
   p {
     font-size: 1.2rem;
