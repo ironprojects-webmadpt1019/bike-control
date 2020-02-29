@@ -2,7 +2,7 @@
 
 A mobile app to show reports of bike assaults and to keep track of your own!
 
-[![](https://imgur.com/a/9WEahXK)](https://luismiguelfeijoo.github.io/Hand-O-Kart/index.html)
+[![](https://i.imgur.com/GO2uOT2.png)](https://luismiguelfeijoo.github.io/Hand-O-Kart/index.html)
 
 ## Intro
 
