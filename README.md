@@ -1,6 +1,6 @@
 # bike-control
 
-A mobile app to show reports of bike assaults and to keep track of your own!
+A mobile app to show reports of bike assaults and to keep track of your bike's location
 
 <a href="https://bike-control.herokuapp.com"><img width="200" alt="main-page" src="https://i.imgur.com/GO2uOT2.png"></a>
 
