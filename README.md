@@ -190,11 +190,11 @@ All of the ideas are welcome!
 
 ## License
 
-Please refer to [LICENSE.md](https://github.com/ironprojects-webmadpt1019/bike-control/LICENSE.md)
+Please refer to [LICENSE.md](https://github.com/ironprojects-webmadpt1019/bike-control/blob/master/LICENSE.md)
 
 ## Contributing
 
-If you want to contributed to this projects, please. Are yourself to [CONTRIBUTING.md](https://github.com/ironprojects-webmadpt1019/bike-control/CONTRIBUTING.md)
+If you want to contributed to this projects, please. Are yourself to [CONTRIBUTING.md](https://github.com/ironprojects-webmadpt1019/bike-control/blob/master/CONTRIBUTING.md)
 
 ## Team
 
