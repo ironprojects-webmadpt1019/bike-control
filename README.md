@@ -10,7 +10,7 @@ It's an app that displays recorded reports of bike-related incidents.
 
 To use it you have to register, once you're in you can view every report ever recorded, create your own and add bikes so you can keep track of their location. Every time you want to park a bike our algorithms will let you know if it's a sure place! 
 
-The layout is a map that displays points on different types of reports. You can also view your bikes and give them located on the map. Finally, we've added a heat map to let you see the hotspots of bike incidents everywhere! 
+The layout is a map that displays points on different types of reports. You can also view your bikes!. Finally, we've added a heat map to let you see the hotspots of bike incidents everywhere! 
 
 ## How does it work
 
