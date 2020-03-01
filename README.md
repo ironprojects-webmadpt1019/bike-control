@@ -2,7 +2,7 @@
 
 A mobile app to show reports of bike assaults and to keep track of your own!
 
-[![](https://i.imgur.com/GO2uOT2.png)](https://bike-control.herokuapp.com)
+<a href="https://bike-control.herokuapp.com"><img width="200" alt="main-page" src="https://i.imgur.com/GO2uOT2.png"></a>
 
 ## What is bike-control 
 
@@ -171,20 +171,20 @@ The last added feature is a heat map, if you zoom out you'll see it 🤓
 
 ### Layout
 
-Te layout was designed with mobile in mind, managing to make it as responsive as possible without media-queries.
+The layout was designed with mobile in mind, managing to make it as responsive as possible without media-queries.
 
 That being said, the design has much more range to be improved!
 
 ### APIs
 
-We had to develop a couple of APIs to give the posibility to render the bike and report data on the front. Also it can help to do more single-page animations in the future!
+We had to develop a couple of APIs to give the possibility to render the bike and report data on the front. Also, it can help to do more single-page animations in the future!
 
-## TO DO (More work in the future 💪🏻)
+## TODO (More work in the future 💪🏻)
 
-* Add mail confirmation services on register and password update feature. Also it would be nice to implement two password input to check if its correctly written.
-* The design can improve, making it more usefull on desktop.
-* Talking of layout, the need of a light theme on daylight would be helpfull!
-* To improve the UI more task can be rendered on a single page, eliminating the need of change the route on the app 
+* Add mail confirmation services on register and password update feature. Also, it would be nice to implement two password input to check if it is correctly written.
+* The design can improve, making it more useful on desktop.
+* Talking of layout, the need for a light theme on daylight would be helpful!
+* To improve the UI more task can be rendered on a single page, eliminating the need of changing the route on the app 
 
 All of the ideas are welcome!
 
@@ -194,7 +194,7 @@ Please refer to [LICENSE.md](https://github.com/ironprojects-webmadpt1019/bike-c
 
 ## Contributing
 
-If you want to contributed to this projects, please. Are yourself to [CONTRIBUTING.md](https://github.com/ironprojects-webmadpt1019/bike-control/blob/master/CONTRIBUTING.md)
+If you want to contribute to this project, please refer to [CONTRIBUTING.md](https://github.com/ironprojects-webmadpt1019/bike-control/blob/master/CONTRIBUTING.md)
 
 ## Team
 
