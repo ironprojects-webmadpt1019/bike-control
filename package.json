@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ironprojects-webmadpt1019/bike-control#readme",
   "dependencies": {
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "connect-ensure-login": "^0.1.1",
     "connect-flash": "^0.1.1",
